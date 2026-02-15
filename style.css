@@ -1,0 +1,369 @@
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+font-family: 'Orbitron', sans-serif;
+}
+
+/* BODY */
+body{
+color:white;
+background:#0a0a0a;
+}
+
+/* NAVBAR */
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 50px;
+background:rgba(0,0,0,0.7);
+backdrop-filter: blur(10px);
+z-index:999;
+}
+
+.logo{
+color:#ff003c;
+text-shadow:0 0 10px #ff003c;
+}
+
+.nav-links{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+.nav-links a{
+color:white;
+text-decoration:none;
+transition:0.3s;
+}
+
+.nav-links a:hover{
+color:#00ffff;
+text-shadow:0 0 10px #00ffff;
+}
+
+.hamburger{
+display:none;
+font-size:25px;
+cursor:pointer;
+}
+
+/* SECTION GLOBAL */
+.section{
+min-height:100vh;
+padding:120px 10%;
+}
+
+/* ================= HOME ================= */
+
+.home{
+background:url("img/home.jpg") center/cover no-repeat;
+display:flex;
+align-items:center;
+}
+
+.home-content h1{
+font-size:60px;
+color:#ff003c;
+text-shadow:0 0 20px #ff003c;
+}
+
+.home-content p{
+margin-top:20px;
+font-size:18px;
+}
+
+/* ================= PROFIL ================= */
+
+.profil{
+background:linear-gradient(135deg,#0f0f0f,#12001f);
+}
+
+.profil-container{
+display:flex;
+align-items:center;
+gap:50px;
+}
+
+.profil-text{
+flex:1;
+}
+
+.profil-text h2{
+color:#00ffff;
+margin-bottom:20px;
+text-shadow:0 0 10px #00ffff;
+}
+
+.profil-img{
+flex:1;
+}
+
+.profil-img img{
+width:100%;
+border-radius:15px;
+box-shadow:0 0 20px #ff003c;
+}
+
+/* ================= STRUKTUR ================= */
+
+.struktur{
+background:linear-gradient(135deg,#12001f,#001f1f);
+text-align:center;
+}
+
+.struktur h2{
+margin-bottom:40px;
+color:#ff003c;
+text-shadow:0 0 10px #ff003c;
+}
+
+.bagan{
+display:flex;
+flex-direction:column;
+gap:30px;
+}
+
+.row{
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.card{
+background:#111;
+padding:20px 30px;
+border-radius:15px;
+box-shadow:0 0 15px #00ffff33;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 0 20px #ff003c;
+}
+
+.card h3{
+color:#00ffff;
+margin-bottom:10px;
+}
+
+/* ================= GALERI ================= */
+
+.galeri{
+background:linear-gradient(135deg,#001f1f,#1f0000);
+}
+
+.galeri h2{
+text-align:center;
+margin-bottom:40px;
+color:#00ffff;
+text-shadow:0 0 10px #00ffff;
+}
+
+.event{
+margin-bottom:50px;
+}
+
+.event h3{
+margin-bottom:20px;
+}
+
+.galeri-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.galeri-img{
+width:100%;
+border-radius:10px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.galeri-img:hover{
+transform:scale(1.05);
+}
+
+/* ================= PRESTASI ================= */
+
+.prestasi{
+background:linear-gradient(135deg,#1f0000,#00001f);
+text-align:center;
+}
+
+.prestasi h2{
+margin-bottom:40px;
+color:#ff003c;
+text-shadow:0 0 10px #ff003c;
+}
+
+.prestasi-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.prestasi-card{
+background:#111;
+padding:15px;
+border-radius:15px;
+transition:0.3s;
+}
+
+.prestasi-card img{
+width:100%;
+border-radius:10px;
+margin-bottom:10px;
+}
+
+.prestasi-card:hover{
+transform:translateY(-5px);
+box-shadow:0 0 20px #00ffff;
+}
+
+/* ================= JADWAL ================= */
+
+.jadwal{
+background:linear-gradient(135deg,#00001f,#0f0f0f);
+text-align:center;
+}
+
+.jadwal h2{
+margin-bottom:30px;
+color:#00ffff;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th, td{
+border:1px solid #333;
+padding:15px;
+}
+
+th{
+background:#ff003c;
+}
+
+/* ================= PENGUMUMAN ================= */
+
+.pengumuman{
+background:linear-gradient(135deg,#0f0f0f,#12001f);
+text-align:center;
+}
+
+.pengumuman h2{
+margin-bottom:40px;
+color:#ff003c;
+}
+
+.pengumuman-list{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+.pengumuman-card{
+background:#111;
+padding:20px;
+border-radius:15px;
+transition:0.3s;
+}
+
+.pengumuman-card:hover{
+box-shadow:0 0 20px #00ffff;
+}
+
+/* ================= SURVEY ================= */
+
+.survey{
+background:linear-gradient(135deg,#12001f,#001f1f);
+text-align:center;
+}
+
+.survey h2{
+color:#00ffff;
+margin-bottom:20px;
+}
+
+.btn-survey{
+display:inline-block;
+margin-top:20px;
+padding:15px 30px;
+background:#ff003c;
+color:white;
+text-decoration:none;
+border-radius:30px;
+box-shadow:0 0 15px #ff003c;
+transition:0.3s;
+}
+
+.btn-survey:hover{
+background:#00ffff;
+box-shadow:0 0 20px #00ffff;
+}
+
+/* ================= LIGHTBOX ================= */
+
+.lightbox{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+display:none;
+justify-content:center;
+align-items:center;
+}
+
+.lightbox img{
+max-width:80%;
+max-height:80%;
+border-radius:15px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+.nav-links{
+position:absolute;
+top:70px;
+right:0;
+background:#000;
+flex-direction:column;
+width:200px;
+display:none;
+padding:20px;
+}
+
+.nav-links.active{
+display:flex;
+}
+
+.hamburger{
+display:block;
+}
+
+.profil-container{
+flex-direction:column;
+}
+
+.home-content h1{
+font-size:40px;
+}
+
+}
