@@ -4,16 +4,17 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 scroll-behavior:smooth;
-font-family: 'Orbitron', sans-serif;
+font-family:'Orbitron',sans-serif;
 }
 
-/* BODY */
 body{
 color:white;
-background:#0a0a0a;
+background:black;
+overflow-x:hidden;
 }
 
-/* NAVBAR */
+/* ================= NAVBAR ================= */
+
 .navbar{
 position:fixed;
 top:0;
@@ -22,14 +23,15 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:15px 50px;
-background:rgba(0,0,0,0.7);
-backdrop-filter: blur(10px);
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(12px);
 z-index:999;
+transition:0.3s;
 }
 
 .logo{
 color:#ff003c;
-text-shadow:0 0 10px #ff003c;
+text-shadow:0 0 12px #ff003c;
 }
 
 .nav-links{
@@ -41,12 +43,30 @@ list-style:none;
 .nav-links a{
 color:white;
 text-decoration:none;
+position:relative;
 transition:0.3s;
 }
 
-.nav-links a:hover{
+/* NAVBAR HIGHLIGHT ACTIVE */
+.nav-links a.active{
 color:#00ffff;
 text-shadow:0 0 10px #00ffff;
+}
+
+.nav-links a::after{
+content:"";
+position:absolute;
+bottom:-5px;
+left:0;
+width:0%;
+height:2px;
+background:#00ffff;
+transition:0.3s;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after{
+width:100%;
 }
 
 .hamburger{
@@ -55,24 +75,36 @@ font-size:25px;
 cursor:pointer;
 }
 
-/* SECTION GLOBAL */
+/* ================= SECTION GLOBAL ================= */
+
 .section{
 min-height:100vh;
 padding:120px 10%;
+
+opacity:0;
+transform:translateY(60px);
+transition:1s cubic-bezier(.17,.67,.83,.67);
 }
 
-/* ================= HOME ================= */
+.section.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* ================= HOME PARALLAX ================= */
 
 .home{
-background:url("img/home.jpg") center/cover no-repeat;
+min-height:100vh;
 display:flex;
 align-items:center;
+background:url("img/home.jpg") center/cover no-repeat;
+background-attachment:fixed;
 }
 
 .home-content h1{
 font-size:60px;
 color:#ff003c;
-text-shadow:0 0 20px #ff003c;
+text-shadow:0 0 25px #ff003c;
 }
 
 .home-content p{
@@ -83,7 +115,7 @@ font-size:18px;
 /* ================= PROFIL ================= */
 
 .profil{
-background:linear-gradient(135deg,#0f0f0f,#12001f);
+background:linear-gradient(180deg,#000000,#001f3f);
 }
 
 .profil-container{
@@ -115,7 +147,7 @@ box-shadow:0 0 20px #ff003c;
 /* ================= STRUKTUR ================= */
 
 .struktur{
-background:linear-gradient(135deg,#12001f,#001f1f);
+background:linear-gradient(180deg,#001f3f,#2b0040);
 text-align:center;
 }
 
@@ -147,7 +179,7 @@ transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-5px);
+transform:translateY(-6px);
 box-shadow:0 0 20px #ff003c;
 }
 
@@ -159,7 +191,7 @@ margin-bottom:10px;
 /* ================= GALERI ================= */
 
 .galeri{
-background:linear-gradient(135deg,#001f1f,#1f0000);
+background:linear-gradient(180deg,#2b0040,#3a0000);
 }
 
 .galeri h2{
@@ -171,10 +203,6 @@ text-shadow:0 0 10px #00ffff;
 
 .event{
 margin-bottom:50px;
-}
-
-.event h3{
-margin-bottom:20px;
 }
 
 .galeri-grid{
@@ -191,13 +219,13 @@ transition:0.3s;
 }
 
 .galeri-img:hover{
-transform:scale(1.05);
+transform:scale(1.07);
 }
 
 /* ================= PRESTASI ================= */
 
 .prestasi{
-background:linear-gradient(135deg,#1f0000,#00001f);
+background:linear-gradient(180deg,#3a0000,#52001a);
 text-align:center;
 }
 
@@ -227,14 +255,14 @@ margin-bottom:10px;
 }
 
 .prestasi-card:hover{
-transform:translateY(-5px);
+transform:translateY(-6px);
 box-shadow:0 0 20px #00ffff;
 }
 
 /* ================= JADWAL ================= */
 
 .jadwal{
-background:linear-gradient(135deg,#00001f,#0f0f0f);
+background:linear-gradient(180deg,#52001a,#002b2b);
 text-align:center;
 }
 
@@ -248,7 +276,7 @@ width:100%;
 border-collapse:collapse;
 }
 
-th, td{
+th,td{
 border:1px solid #333;
 padding:15px;
 }
@@ -260,7 +288,7 @@ background:#ff003c;
 /* ================= PENGUMUMAN ================= */
 
 .pengumuman{
-background:linear-gradient(135deg,#0f0f0f,#12001f);
+background:linear-gradient(180deg,#002b2b,#000a1f);
 text-align:center;
 }
 
@@ -289,7 +317,7 @@ box-shadow:0 0 20px #00ffff;
 /* ================= SURVEY ================= */
 
 .survey{
-background:linear-gradient(135deg,#12001f,#001f1f);
+background:linear-gradient(180deg,#000a1f,#000000);
 text-align:center;
 }
 
